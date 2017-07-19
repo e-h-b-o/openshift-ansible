@@ -15,10 +15,10 @@
   when: cloudprovider_is_openstack | bool
 
 - include: aws.yml
-  when: cloudprovider_is_aws | bool and not cloudprovider_is_aws_container | bool
+  when: cloudprovider_is_aws | bool
 
 - include: aws_container.yml
-  when: cloudprovider_is_aws_container | bool
+  when: cloudprovider_is_container | bool
 
 - include: gce.yml
   when: cloudprovider_is_gce | bool
